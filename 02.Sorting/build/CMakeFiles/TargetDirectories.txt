@@ -1,4 +1,0 @@
-/home/leroy/Study/Algorithms_4th_edition/02.Sorting/build/CMakeFiles/rebuild_cache.dir
-/home/leroy/Study/Algorithms_4th_edition/02.Sorting/build/CMakeFiles/edit_cache.dir
-/home/leroy/Study/Algorithms_4th_edition/02.Sorting/build/CMakeFiles/binSorting.dir
-/home/leroy/Study/Algorithms_4th_edition/02.Sorting/build/CMakeFiles/libSorting.dir
