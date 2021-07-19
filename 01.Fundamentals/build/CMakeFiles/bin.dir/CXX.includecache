@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leroy/Study/Algorithms_4th_edition/01.Fundamentals/binarySearch.cpp
+fstream
+-
+string
+-
+vector
+-
+iostream
+-
+sstream
+-
+

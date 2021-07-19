@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -g2 -ggdb   CMakeFiles/bin.dir/main.cpp.o CMakeFiles/bin.dir/binarySearch.cpp.o  -o bin 
