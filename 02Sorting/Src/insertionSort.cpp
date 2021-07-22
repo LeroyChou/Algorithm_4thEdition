@@ -4,8 +4,8 @@
 using namespace std;
 
 void insertionSort(){
-    string dir{"../data/unordered.txt"};
-    Insertion IS{dir};
+    string dir("../data/unordered.txt");
+    Insertion IS(dir);
     clock_t startTime, endTime;
     startTime = clock();
     IS.sort();

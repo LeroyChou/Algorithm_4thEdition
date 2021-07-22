@@ -5,8 +5,8 @@
 using namespace std;
 
 void shellSort(){
-    string s{"../data/unordered.txt"}; 
-    Shell sl{s};
+    string s("../data/unordered.txt");
+    Shell sl(s);
     clock_t start, end;
     start = clock();
     sl.sort();

@@ -24,7 +24,7 @@ public:
 
 inline void
 Insertion::sort(){
-    std::ofstream fileout{"../data/insertionProc.txt"};
+    std::ofstream fileout("../data/insertionProc.txt");
     addLine(fileout, list);
     for (auto ite = list.begin() + 1; ite != list.end(); ++ite){
         for (auto ite2 = ite; ite2 != list.begin() && less(*ite2, *(ite2-1)); --ite2){

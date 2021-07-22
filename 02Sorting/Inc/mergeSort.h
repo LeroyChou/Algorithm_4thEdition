@@ -41,7 +41,7 @@ Merge::merge(std::vector<int>& list, int lo, int mid, int hi){
             list[k] = auxList[j++];
         } else if (j > hi) {
             list[k] = auxList[i++];
-        } else if (list[i] < list[j]) {
+        } else if (auxList[i] < auxList[j]) {
             list[k] = auxList[i++];
         } else {
              list[k] = auxList[j++];

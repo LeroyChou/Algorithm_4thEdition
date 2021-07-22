@@ -3,8 +3,8 @@
 
 using namespace std;
 void selectionSort(){
-    string s{"../data/unordered.txt"};
-    Selection SS{s};
+    string s("../data/unordered.txt");
+    Selection SS(s);
     clock_t start, end;
     start = clock();
     SS.sort();

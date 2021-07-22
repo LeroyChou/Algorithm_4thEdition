@@ -14,7 +14,7 @@ ostream& operator << (ostream& os, const vector<int>& vec){
 /*从文件中读取数据*/
 vector<int> read(const string& dir){
     vector<int> list;
-    fstream filein{dir};
+    fstream filein(dir);
     string line, word;
     stringstream linestream;
     int data;
@@ -22,7 +22,7 @@ vector<int> read(const string& dir){
         linestream.str(line);
         while(linestream >> word){
             data = stoi(word);
-            list.emplace_back(data);
+            list.push_back(data);
         }
         linestream.str(string());
         linestream.clear();

@@ -23,7 +23,7 @@ public:
 
 inline void
 Selection::sort(){
-    std::ofstream fileout{"../data/selectionProc.txt"};
+    std::ofstream fileout("../data/selectionProc.txt");
     addLine(fileout, list);
     int len = list.size();
     for(auto i = 0; i < len; ++i){
