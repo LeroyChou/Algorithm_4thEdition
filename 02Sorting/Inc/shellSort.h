@@ -31,9 +31,8 @@ Shell::sort(){
     std::ofstream fileout("../data/shellProc.txt");
     addLine(fileout, list);
 #endif /*PROCESS*/
-    int data;
     std::string word, line;
-    auto N = list.size();
+    int N = list.size();
     int h = 1;
     while(h < N / 3){
         h = 3 * h + 1;
