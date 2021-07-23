@@ -11,8 +11,8 @@ int main(){
 //    vector<double> y{2, 2, 3,5, 6};
 //    selectionSort(vec);
 //    insertionSort(vec);
-    shellSort(vec);
-//    mergeSort(vec);
+//    shellSort(vec);
+    mergeSort(vec);
     cout << vec << endl;
     return 0;
 }

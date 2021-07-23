@@ -13,22 +13,23 @@ class Merge{
 private:
      std::vector<int>& list;
      std::vector<int> auxList;
+     void merge(int lo, int mid, int hi);
 public:
-    void merge(std::vector<int>& list, int lo, int mid, int hi);
     Merge(std::vector<int>& vec)
     :list(vec),auxList(vec){
     }
     int getLength(){
         return (int) list.size();
     }
-    void sortTB(int lo, int high);
+    void sortTD(int lo, int high);  //自顶而下归并
+    void sortBU();  //自底而上归并
     void printResult(){
         std::cout << list << std::endl;
     }
 };
 
 inline void
-Merge::merge(std::vector<int>& list, int lo, int mid, int hi){
+Merge::merge(int lo, int mid, int hi){
     int i = lo;
     int j = mid + 1;
 //    int k = lo;
@@ -49,15 +50,25 @@ Merge::merge(std::vector<int>& list, int lo, int mid, int hi){
 }
 
 inline void
-Merge::sortTB(int lo, int hi){
+Merge::sortTD(int lo, int hi){
     if (lo >= hi) {
         return;
     }
     int mid = lo + (hi-lo) / 2;
 //    std::cout << mid <<" ";
-    sortTB(lo, mid);
-    sortTB(mid+1, hi);
-    merge(list, lo, mid, hi);
+    sortTD(lo, mid);
+    sortTD(mid+1, hi);
+    merge(lo, mid, hi);
 
+}
+
+inline void
+Merge::sortBU(){
+    int N = list.size();
+    for(int sz=1; sz <= N; sz*=2){
+        for(int lo=0; lo <= N-1-sz; lo+=2*sz){
+            merge(lo, lo+sz-1, min(lo+2*sz-1, N-1));
+        }
+    }
 }
 #endif /*__MERGESORT_H__*/

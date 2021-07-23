@@ -53,5 +53,10 @@ std::vector<int> read(const std::string&);
 /*将数据写入文件的一行*/
 void addLine(std::ofstream&, std::vector<int>& list);
 
+/*求两个整数的最小值*/
+inline
+int min(int a, int b){
+    return (a < b)? a: b;
+}
 #endif /*__HELPER_H__*/
 
