@@ -9,14 +9,14 @@
 #include <iostream>
 
 
-void shellSort();
+void shellSort(std::vector<int>&);
 
 class Shell{
 private:
-    std::vector<int> list;
+    std::vector<int>& list;
 public:
-    Shell(std::string dir)
-    :list(read(dir)){
+    Shell(std::vector<int>& vec)
+    :list(vec){
     }
 
     void sort();

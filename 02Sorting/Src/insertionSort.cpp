@@ -3,9 +3,9 @@
 
 using namespace std;
 
-void insertionSort(){
-    string dir("../data/unordered.txt");
-    Insertion IS(dir);
+void insertionSort(vector<int>& vec){
+    cout << "insertionSort begin." << endl; 
+    Insertion IS(vec);
     clock_t startTime, endTime;
     startTime = clock();
     IS.sort();

@@ -2,9 +2,9 @@
 #include <ctime>
 
 using namespace std;
-void selectionSort(){
-    string s("../data/unordered.txt");
-    Selection SS(s);
+void selectionSort(vector<int>& vec){
+    cout << "selectionSort begin." << endl; 
+    Selection SS(vec);
     clock_t start, end;
     start = clock();
     SS.sort();

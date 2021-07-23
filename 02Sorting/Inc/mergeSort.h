@@ -7,17 +7,16 @@
 #include <string>
 #include "helper.h"
 
-void mergeSort();
+void mergeSort(std::vector<int>&);
 
 class Merge{
 private:
-    std::vector<int> list;
+     std::vector<int>& list;
      std::vector<int> auxList;
 public:
     void merge(std::vector<int>& list, int lo, int mid, int hi);
-    Merge(std::string& dir)
-    : list(read(dir)) {
-        auxList = list;
+    Merge(std::vector<int>& vec)
+    :list(vec),auxList(vec){
     }
     int getLength(){
         return (int) list.size();

@@ -6,15 +6,15 @@
 #include <fstream>
 #include "helper.h"
 
-void insertionSort();
+void insertionSort(std::vector<int>&);
 
 class Insertion{
 private:
-    std::vector<int> list;
+    std::vector<int>& list;
    // std::vector<int>::iterator it;
 public:
-    Insertion(std::string& dir)
-    : list(read(dir)) {
+    Insertion(std::vector<int>& vec)
+    :list(vec){
     }
     void sort();
     void printResult(){

@@ -6,14 +6,14 @@
 #include <iostream>
 #include <sstream>
 #include "helper.h"
-void selectionSort();
+void selectionSort(std::vector<int>&);
 
 class Selection{
 private:
-    std::vector<int> list;
+    std::vector<int>& list;
 public:
-    Selection(const std::string &s)
-    :list(read(s)){
+    Selection(std::vector<int>& vec)
+    :list(vec){
     }
     void sort();
     void printResult() const {

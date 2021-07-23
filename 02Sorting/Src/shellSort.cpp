@@ -4,9 +4,9 @@
 
 using namespace std;
 
-void shellSort(){
-    string s("../data/unordered.txt");
-    Shell sl(s);
+void shellSort(vector<int>& vec){
+    cout << "shellSort begin." << endl; 
+    Shell sl(vec);
     clock_t start, end;
     start = clock();
     sl.sort();
